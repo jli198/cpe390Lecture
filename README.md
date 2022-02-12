@@ -2,13 +2,13 @@
 2021 Fall Stevens Institute of Technology
 
 * **Meeting Times:** 		Section A: Tuesday, Thursday at 12:30-1:45 | Section B: Tuesday, Thursday at 2:00-3:15
-* **Classroom Location:**	B123
+* **Classroom Location:**	X218-A
 * **Instructor:** 		Teaching Associate Prof. Dov Kruger
 * **Contact Info:** 		Burchard Building 217, dkruger at stevens
 * **Teaching Assistant:**       Fan Yang (fyang14 at stevens)
 * **Office Hours:**		
-  * Dov Kruger: online, Wedneday 11-12 Thursday 11-12, 8pm-9pm, in person by appt
-  * Fan Yang:   Burchard Building 315, Mondays at 2.30pm-4.30pm and Wednesdays at 3.00pm-5.00pm
+  * Dov Kruger: online, Wednesday 10-11, Thursday 10-11, Monday 9pm-10pm, Thursday 8pm-9pm, in person by appt
+  * Fan Yang:   Burchard Building 315, Tuesdays at 5.00pm-7.00pm
 
 * **Course Web Address:**	https://github.com/stevensdeptece/CPE390
 
@@ -17,7 +17,7 @@
 This course covers two aspects of how computers work.
 
 First, how to write more efficient programs using a knowledge of how
-computers owrk. We cover ARM assembler, optimization, and many aspects
+computers work. We cover ARM assembler, optimization, and many aspects
 of computers such as relative cost of different instructions, memory
 characteristics, cache, MMU, block-oriented devices, and calls to the
 OS to learn how to make computing faster. In addition, by learning the
@@ -41,7 +41,6 @@ After successful completion of this course, students will be able to
 *	Draw CAD diagrams of circuits
 *	Test circuits in the lab using oscilloscopes and other equipment
 
-
 ## FORMAT AND STRUCTURE
 *	Classes always involve live coding. Students are expected to participate and bring laptops to class, and take turns interacting on the screen with the instructor.
 *	There will be weekly coding homework or handwritten assignments as well as a weekly lab.
@@ -59,10 +58,12 @@ After successful completion of this course, students will be able to
 
 ## GRADING PROCEDURES
 Grades will be based on:
-* Programming Assignments             (5 %)
-* Homework Assignments	              (5 %)
-* Quizzes		              (10 %)
-* Exams		              	      (80 %)
+* Quizzes (0%)
+* Labs (10%)
+* Programming homework (5%)
+* Online homework (5%)
+* Midterm (40%)
+* Final (40%)
 
 Late Policy: Assignments submitted after the deadline will not be graded.
 
