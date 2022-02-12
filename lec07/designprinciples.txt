@@ -1,0 +1,55 @@
+cache: fast memory used to remember frequently used data
+
+principle of locality: tend to read same memory lot
+80-20
+
+bigger is not necessarily better
+  bigger memory is, slower it is
+  transistors take time to switch from 0 to 1 or 1 to 0
+  speed of answer involves how many transistors does it go through
+
+AND(a,b)
+OR(a,b)
+XOR(a,b) one not th other A and B must differ
+NOT(a)
+
+CMOS - technology used to implement current circuits
+N-channel MOSFETS have lower resistance than P-channel
+
+NAND  NOT AND
+NOR   NOT OR
+
+A  B  AND  OR  NAND  NOR  XOR  CMP
+0  0   0   0    1    1    0     1
+0  1   0   1    1    0    1     0
+1  0   0   1    1    0    1     0
+1  1   0   1    1    0    0     1
+
+ALU(add, sub, mul, div, sqrt, ......, encryptAES256, special)
+
+special() {
+encryptAES256
+}
+
+//RISC designer: statistical tester, designer, debater
+
+
+switch(instr) {
+case add: f1();
+case sub: f2();
+case mul: f3();
+case special: special();
+}
+or ( f1(), f2(), f3() ...)
+
+
+CISC Complex Instruction Set Computer
+RISC Reduced Instruction Set Computer
+
+memory is arranged in rectangle (rows, cols)
+latency is much higher if go to new place
+
+Computer
+  CPU   Central Processing Unit (4 cores)
+  cache fast memory to make it faster to re-read data
+        L1 32k

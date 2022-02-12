@@ -1,0 +1,35 @@
+Rpi 4 1.5 Ghz  every 1/1.5 billonth of second, execute
+khz
+Mhz
+Ghz
+T = 1/f each clock period = 1/1.5 billionth of second 2/3ns
+
+how far does light travel in 1ns? 1ft
+latency
+  1. shrink computer (bring close together)
+  2. send asycnhronously (don't wait)
+having master clock to synchronize is faster
+
+2Gb - 8Gb
+
+4Gb = 2 **32
+every address on machine = 32 bits
+
+64-bit operating system, every address = 64 bits
+
+0x000000007FFF2414
+
+why 64-bit
+AARCH64 has ARM A72
+
+1. division --> call function
+2. hardware acceleration for encryption
+3. other speiiality instructions
+4. Anyone with Mac using M1 chip can program on that
+5. NEON vector engine  2 double multiply-add
+
+ssh ...
+https://
+
+man-in-the-middle: cut wire, login yourself
+replay attacK: I don't understand what you did, but I know you connected to Dominos Pizzas, so I send packet 100k times
