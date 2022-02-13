@@ -1,5 +1,5 @@
 # Microprocessor Systems: CPE 390 
-2021 Fall Stevens Institute of Technology
+2022 Spring Stevens Institute of Technology
 
 * **Meeting Times:** 		Section A - Tuesday, Thursday at 12:30-1:45 | Section B - Tuesday, Thursday at 2:00-3:15
 * **Classroom Location:**	X218-A
