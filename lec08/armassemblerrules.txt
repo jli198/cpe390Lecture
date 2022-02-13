@@ -1,0 +1,35 @@
+1. there are 32 registers
+
+X0 .. X31 (64 bit)
+W0 .. W31 (32 bit, low half of X)
+
+floating point
+D0 .. D15 32 double precision registers
+s0 .. s31 64 single precision registers
+
+(s0,s1) = d0 each pair of single precision registers IS SAME AS double
+(s2,s3) = d1
+
+2. calling conventions
+	first integer parameter w0
+	first 64-bit integer parameter x0
+	works up to 8 parameters
+	
+	first double precision d0
+
+f(int a, uint64_t, double c) {
+	w0	x1	d0
+}
+
+uint64_t f(uint64_t a, uint64_t b, uint64_t c) {
+x0 		x1		x2
+
+return avlues are in w0 or x0 for integer
+for double x0
+
+
+
+
+
+
+
