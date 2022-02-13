@@ -24,7 +24,7 @@ f(int a, uint64_t, double c) {
 uint64_t f(uint64_t a, uint64_t b, uint64_t c) {
 x0 		x1		x2
 
-return avlues are in w0 or x0 for integer
+return values are in w0 or x0 for integer
 for double x0
 
 
