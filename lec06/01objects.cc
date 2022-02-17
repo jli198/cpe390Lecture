@@ -17,13 +17,13 @@ public:
   Fraction(int n, int d) : num(n), den(d) {} // initialer list syntax
 
   // this is method or C++ member function
-  void print() { cout << num << "/" << den; 
+  void print() { 
+    cout << num << "/" << den; 
   }
-}
-
+};
 
 int main() {
-  Fraction a; // take 8 bytes on
+  Fraction a; // take 8 bytes on stack
   a.print(); // print (&a)
   Fraction b(1, 3);
   b.print(); //print (&b)

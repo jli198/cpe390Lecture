@@ -31,5 +31,13 @@ AARCH64 has ARM A72
 ssh ...
 https://
 
-man-in-the-middle: cut wire, login yourself
-replay attacK: I don't understand what you did, but I know you connected to Dominos Pizzas, so I send packet 100k times
+man-in-the-middle: cut the wire, login yourself
+replay attack: I don't understand what you did, but I know you connected to Dominos Pizza, so I send that packet 100k times
+
+
+
+
+
+
+
+

@@ -1,45 +1,70 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 
-int add(int a, int b) { 
-  return a + b; 
-}
+int add(int a, int b) { return a + b; }
 
-/* void f() {
-  kdsakfkfkdfd 
-    ekfkfsdkfdf 
-    fefkefkefek 
-    afdakfdfk 
-  for (int i = 1; i < 1000000; i++)
-} */
-
-/*
-advantages of functions
-1. don't rewrite code (faster? less maintenance)
-if copy code n times, then fix one
-2. one monumental program is VERY HARD to debug
-3. 
-*/
-
+// return the hypotenuse of a,b (function prototype)
 double hypot(double a, double b);
 
-void rect2polar(double x, double y, double& r, double& theta) {
-  r = sqrt(x * x + y * y);
-  theta = atan2(y, x);
-  x = 99;
+int factorial(int n) {  // n*(n-1)*(n-2)*...1  //O(n)
+  int prod = 1;
+  for (int i = 1; i <= n; i++) prod *= i;
+  return prod;
+}
+
+int fact(int n) {
+  if (n == 1) return 1;
+  return n * fact(n - 1);  // tail recursion can be optimized into a loop
+}
+
+int count(int n) {
+  int sum = 0;
+  for (int i = 0; i < n; i++) sum++;
+  return sum;
+}
+
+int count2(int n) {
+  if (n == 0) return 0;
+
+  return 1 + count2(n - 1);
+}
+
+// phi = (1+sqrt(5))/2
+// 1 2 3 4     5    6       7     8
+// 1 1 2 3     5    8       13    21 34 55 ...
+//   1 2 1.5   1.66 1.625
+
+double fibo(int n) {
+  double a = 1, b = 1, c;
+  // a=1 1 2
+  // b=1 2 3
+  // c=2 3 5
+  for (int i = 0; i < n; i++) {
+    c = a + b;
+    a = b;
+    b = c;
+  }
+  return c;
+}
+
+// O(2^n)
+double fibo2(int n) {
+  if (n <= 2) {
+    return 1;
+  }
+  return fibo2(n - 1) + fibo2(n - 2);
 }
 
 int main() {
-  /// write 10,000 lines in main 
-  cout << (5) << '\n'; // can be optimized, inlined
-  //cout << hypot(3, 4);  // cannot be optimized, compiler does not know
+  //	10,000 lines of code
+  //  cout << add(2,3) << '\n';
+  // optimzer will generate:
 
-  double x, y, r, theta;
-  cin >> x >> y;
-  rect2polar(x, y, r, theta);
-
-  cout << "r= " << r << " theta= " << theta << '\n';
-
-  // f(); f(); f();
+  cout << add(2, 3) << '\n';
+  cout << factorial(5) << '\n';
+  cout << fact(5) << '\n';
+  // MMU crashes this program with with segfault
+  // (too much stack used)
+  // cout << count2(1000000) << '\n';
+  cout << fibo2(50) << '\n';
 }

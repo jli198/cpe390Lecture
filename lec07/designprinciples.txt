@@ -50,6 +50,29 @@ memory is arranged in rectangle (rows, cols)
 latency is much higher if go to new place
 
 Computer
-  CPU   Central Processing Unit (4 cores)
-  cache fast memory to make it faster to re-read data
-        L1 32k
+	CPU	Central Processing Unit (4 cores)
+	cache	fast memory to make it faster to re-read data
+		L1 32k
+		L2 2M
+		L3 16M
+	hit rate % of time cache is hit
+	    problems with cache (you can't cache everything)
+
+	registers - fastest on a computer
+	   Intel 16 registers names are horrible
+
+	   AARCH64  all integer registers are 64 bits
+		X0	
+		X1
+		...
+		X30
+		X31	= 0 forget it
+
+		w0	(low half of each x register)
+		w1	
+		..
+		w30
+
+		PC	Program Counter This is where your code is
+		SP	Stack Pointer (where your data is for functions)
+		LR	Link Register (Faster function calls)
