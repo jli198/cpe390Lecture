@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-#include <iostream>
-using namespace std;
-
-int add(int, int, int, int); //_Z3addiiii
-uint64_t divide(uint64_t, uint64_t, uint64_t, uint64_t);
-
-int main() {
-  int ans1 = add(1,2,3,4);
-  cout << ans1 << '\n';
-
-  uint64_t ans2 = divide(3, 2, 5, 2);
-  cout << ans2 << '\n';
-}
-=======
 #include <iostream>
 using namespace std;
 
@@ -34,4 +19,3 @@ int main() {
   uint64_t ans4 = max(4, 1, 9);
   cout << ans4 << '\n';
 }
->>>>>>> 623776989f94c18f3525646f5294076dd583b6c5
