@@ -5,6 +5,7 @@ uint64_t g(uint64_t a, uint64_t b);
 
 double hypot(double a, double b);
 int64_t bigger(int64_t, int64_t);
+
 int main() {
   int y = f(2);
 

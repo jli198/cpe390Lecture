@@ -25,7 +25,7 @@ _Z1gmm:
 	.cfi_endproc
 .LFE1593:
 	.size	_Z1gmm, .-_Z1gmm
-	.section	.text.startup,"ax",@progbits
+	.section	.text.startup,"ax", @progbits
 	.align	2
 	.p2align 4,,11
 	.global	main
