@@ -10,9 +10,9 @@ _Z3sumi:
 	.cfi_startproc
 	cmp	w0, 0
 	ble	.L4
-	add	w2, w0, 1 // i = 1
-	mov	w1, 1 // sum = 0
-	mov	w0, 0
+	add	w2, w0, 1 // i = 1 | w2 = n
+	mov	w1, 1 // lines 13-15 everything before i <= n
+	mov	w0, 0 // sum = 0
 	.p2align 3,,7
 .L3:
 	add	w0, w0, w1 // sum = sum + i
