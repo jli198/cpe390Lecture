@@ -62,9 +62,28 @@ void bugs() {
 }
 
 //pass by reference
-void stats(...) {
+void stats(int *x, int size, double &mean, double &max, double &min) {
+  
+  int sum = 0;
+  min = x[0];
+  max = x[0];
+  for(int i = 0; i < size; i++){
+    sum += x[i];
 
+    if(x[i] < min) {
+      min = x[i];
+    }
+
+    if(x[i] > max) {
+      max = x[i];
+    }
+    
+  }
+  //sizeof(x)/sizeof(x[0])
+  mean = sum/size;
+  
 }
+
 
 int main() {
   double x[] = {10, 20, 30, 40};

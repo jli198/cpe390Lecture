@@ -24,10 +24,10 @@ _Z4prodiiii:
 
   .globl _Z3maxmmm
 _Z3maxmmm:
-  cmp x0, x1
-  bgt greater
-  //less than or equal to...
+  cmp x0, x1 // if()
+  bgt greater // branches if(x1 > x0)
   mov x0, x1 // x0 = x1
+  //less than or equal to...
   ret
 greater:
   ret
@@ -35,22 +35,22 @@ greater:
   .globl _Z3maxmmm
   // x0 x1 x2
 _Z3maxmmm
-  cmp x0, x1
-  bgt greater2
+  cmp x0, x1 // if()
+  bgt greater2 //if (x1 > x0) => greater2
   //less than or equal to...
-  cmp x1, x2
-  bgt x1isit
+  cmp x1, x2 // if() temp = x2-x1
+  bgt x1isit //branch if temp is +
   // x1 <= x2
 x2isit:  // x2 is it
-  mov x0, x2
+  mov x0, x2 // x0 = x2
   ret
 x1isit:
-  mov: x0, x1
+  mov: x0, x1 // x0 = x1
   ret
 
-greater2:
-  cmp x0, x2
-  ble x2isit
+greater2: 
+  cmp x0, x2 // if()      temp=x2-x0
+  ble x2isit //branch if temp is -
   
 x0isit:
   ret
