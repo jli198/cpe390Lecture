@@ -23,9 +23,17 @@ public:
 
   // this is friend function
   // add (a,b)
-  /* friend Fraction add(const Fraction& a, const Fraction& b) {
+  friend Fraction add(const Fraction& a, const Fraction& b) {
     return Fraction(a.num*b.den);
-  } */
+  }
 
+  // return numerator of fraction
+  int getNum() const {return num;}
+  int getDen() const {return den;}
+
+  // this implements cout << f and prints out 1/2, 1/3 etc
+  friend std::ostream& operator << (std::ostream& s, const Fraction& f) {
+    s << f.num << "/" << f.den;
+  }
 
 };
