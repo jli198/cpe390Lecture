@@ -1,0 +1,3 @@
+rm foo
+cat >foo //cat catenates files (similar to type in DOS) [putstuff in file]
+testing
