@@ -5,19 +5,21 @@ using namespace std;
 // sum the numbers from a to b inclusive
 uint64_t sum(int a, int b) {
   int s;
-  for (int i = a; i < b; i++) s += i;
+  for (int i = a; i <= b; i++) s += i;
   return s;
 }
 // recursive factorial
 uint64_t factr(int n) {
-  if (n == 0) return 1;
+  if (n <= 0) return 1;
   return n * factr(n - 1);
 }
 
 // return n factorial (n!)
 uint64_t fact(uint32_t n) {
-  int prod = 0;
-  for (uint32_t i = n; i >= 0; i--) prod *= i;
+  uint64_t prod = 1;
+  for (uint32_t i = n; i > 0; i--) {
+    prod *= i;
+  }
   return prod;
 }
 
@@ -25,13 +27,17 @@ double choose(int n, int r) { return fact(n) / (fact(r) * fact(n - r)); }
 
 double mean(const double x[], uint32_t len) {
   double sum = 0;
-  for (uint32_t i = 0; i <= len; i++) sum += x[i];
+  for (uint32_t i = 0; i < len; i++) {
+    sum += x[i];
+  }
   return sum / len;
 }
 
 // reverse the array x
 void reverse(int x[], int len) {
-  for (int i = 0; i < len; i++) swap(x[i], x[len - i]);
+  for (int i = 0; i < len/2; i++) {
+    swap(x[i], x[(len -1) - i]);
+  }
 }
 
 double f1(double x) { return x * x - 2; }
@@ -48,21 +54,21 @@ double bisect(FuncOneVar f, double a, double b) {
       a = x;
     else
       return x;
-  } while (a != b);
+  } while (abs(a-b) > 0.000000001);
   return x;
 }
 
 int main() {
-  cout << "sum(3,5)=" << sum(3, 5) << '\n';
-  //	cout << "factr(-1)=" << factr(-1) << '\n';
-  //	cout << "fact(10)=" << fact(10) << '\n';
-  //	cout << "choose(52,6)=" << choose(52,6) << '\n';
+  cout << "sum(3,5)=" << sum(3, 5) << endl;
+  cout << "factr(-1)=" << factr(-1) << '\n';
+  cout << "fact(10)=" << fact(10) << " " << fact(20) << '\n';
+  cout << "choose(52,6)=" << choose(52,6) << '\n';
   double a1[] = {10, 20, 30, 40};
   double a2[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
   double a3[] = {1000, 2000, 3000, 4000, 5000, 6000};
-  cout << "mean(a1)=" << mean(a1, 4) << '\n';
-  cout << "mean(a2)=" << mean(a2, 9) << '\n';
-  cout << "mean(a3)=" << mean(a3, 6) << '\n';
+  cout << "mean(a1)=" << mean(a1, 4) << endl;
+  cout << "mean(a2)=" << mean(a2, 9) << endl;
+  cout << "mean(a3)=" << mean(a3, 6) << endl;
 
   int a[] = {50, 40, 30, 20, 10};
   reverse(a, 5);
