@@ -1,3 +1,22 @@
+65536 4096  256   16    1
+16**4 16**3 16**2 16**1 16**0
+
+FE = decimal 15*16+14 = 254
+FF = 255
+00 = 0
+10 = 16
+20 = 32
+
+int a = 123;
+int b = 0x1234FAD2;
+
+  F0
+  +8
+  F8
+  +8
+ 100
+
+
 1010
 1101
 ====
@@ -12,6 +31,19 @@
 0100
 ====
 1101 OR
+
+RRRRRRRRGGGGGGGGBBBBBBBB
+  A B G R
+0xFF00FF00 RGBA
+
+10 bits per color channel = 30 bits (HDR)
+
+uint32_t color(uint8_t r, uint8_t g, uint8_t b) {
+
+}
+
+don't use single & when you mean && !!!!
+if (x > 3 && y > 2)
 
 1010
 1101
@@ -39,6 +71,25 @@ if (x < 3 and x > 7) {
                  =======================================
                  0111 1110 0011 0111 1111 1110 0111 1011
                  7    D    3    7    F    D    7    B
+
+George Boole 
+a*b
+
+0x2B | ~0x2b == 0xFF
+0x2B & ~0x2b == 0
+
+eXclusive OR XOR
+
+/c/mydir/test
+c:\test\
+
+1001
+1101
+==== XOR
+0100
+1101
+==== XOR
+1001
 
 n = 8 ror x0, 3 == rol x0, 5
 10100xyz -> xyz10100
