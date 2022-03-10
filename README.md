@@ -1,3 +1,5 @@
+[<img src="StevensLogo.webp" alt="Stevens Institute of Technology - The Innovation University®">](http://stevens.edu/)
+
 # Microprocessor Systems: CPE 390 
 2022 Spring Stevens Institute of Technology
 
