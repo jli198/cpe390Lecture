@@ -80,7 +80,7 @@ Late Policy: Assignments submitted after the deadline will not be graded.
     - the quality of the code                   (20 %)
     - inclusion of test codes                   (20 %)
     - reproducibility                           (10 %)
-* Final exam date: **5/11/2022 Wednesday at 8.00pm in Section A - BC 321, Section B - M 205**
+* Final exam date: **5/11/2022 Wednesday at 8.00am in Section A - BC 321, Section B - M 205**
 
 ## ACADEMIC INTEGRITY 
 
