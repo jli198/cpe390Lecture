@@ -80,7 +80,7 @@ Late Policy: Assignments submitted after the deadline will not be graded.
     - the quality of the code                   (20 %)
     - inclusion of test codes                   (20 %)
     - reproducibility                           (10 %)
-* Final exam date: **12/12/2019 Thursday at 6.30pm in BC 319 **
+* Final exam date: **5/11/2022 Wednesday at 8.00pm in Section A - BC 321, Section B - M 205**
 
 ## ACADEMIC INTEGRITY 
 
@@ -141,3 +141,4 @@ You are expected to treat your instructor and all other participants in the cour
  
 EMERGENCY INFORMATION
 In the event of an urgent or emergent concern about the safety of yourself or someone else in the Stevens community, please immediately call the Stevens Campus Police at 201-216-5105 or on their emergency line at 201-216-3911.  These phone lines are staffed 24/7, year round.  Other 24/7 resources for students dealing with mental health crises include the National Suicide Prevention Lifeline (1-800-273-8255) and the Crisis Text Line (text “Home” to 741-741). If you are concerned about the wellbeing of another Stevens student, and the matter is not urgent or time sensitive, please email the CARE Team at care@stevens.edu. A member of the CARE Team will respond to your concern as soon as possible.  
+
