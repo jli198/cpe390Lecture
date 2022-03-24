@@ -35,20 +35,28 @@ sumarray8:
   mov x0, x3
   ret
 
-  .globl main
+  .global main 
 main:
-  ldr x0, data
-  mov w1, 5 
-  bl sumarray
-  ret
-p1: .dword data1
-p2: .dword data2
-p3: .dword data3
+  ldr	x0, p1 // not right!
+  mov	w1, 5
+  bl    sumarray
 
+	ldr	x0, p2
+	mov	w1, 4
+	bl    sumarray32
+
+	ldr	x0, p3
+	mov	w1, 10
+	bl    sumarray8
+
+	ret
+p1:	.dword data1
+p2:	.dword data2		
+p3:	.dword data3	
 data1:
-  .dword 1,2,3,4,5
+	.dword	1,2,3,4,5
 data2:
-  .word 3, 2, 1, 4
-data3:  
-  .ascii: 'hello'
-  .asciiz: "testing test 123"
+	.word	3, 2, 1, 4
+data3:		
+	//.ascii:	'hello'
+	//.ascii: "testing testing 123"
