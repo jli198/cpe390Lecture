@@ -3,12 +3,12 @@ using namespace std;
 int main() {
   int a = 2;
   int b = 3;
-  int c = a << b; //000000000000000000000000000000000100000 = 16
+  int c = a << b; //00000000000000000000000000000000010000 = 16
   // lsl w0, w1 <-- immediate mode
   // lsl w0, #3
 
-  uint64_t d = 0xFEEDF001U >> 2; //
-  // 
+  uint64_t d = 0xFEEDF001U >> 2; // 11111110111011011111000000000001
+  // 00111111
 
   int64_t d2 = 0xFEEDF001 >> 2; //
   //
