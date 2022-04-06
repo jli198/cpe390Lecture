@@ -1,6 +1,6 @@
 add x0, x1, #2 // x0 = x1 + 2 | pc = pc + 4
 
-bl f // pc = pc + 4, lr = pc, pc = f         lc is link register
+bl f // pc = pc + 4, lr = pc, pc = f         lr is link register
 
 // you should know how to compile C++ program, look at call
 // and figure out what function is called
