@@ -1,4 +1,7 @@
+// This program works with the included choose2_arm.s file in github. Have both on file when compiling in asme folder.
+
 #include <iostream>
+#include <iomanip>
 using namespace std;
 // choose(n,r) = n! / (r! (n-r)!) choose(52,6) = 52! / (6! 46!) 
 
@@ -22,6 +25,6 @@ int main() {
   for (int i = 1; i < 30; i++)
     cout << setprecision(15) << i << "\t" << fact(i) << '\n';
   cout << setprecision(15) << choose_arm(52, 6) << '\n';
-  cout << setprecision(15) << choosefast(52, 6) << '\n';
+  cout << setprecision(15) << choosefast(6) << '\n';
   cout << setprecision(15) << choose_arm(52, 6) << '\n';
 }
