@@ -1,0 +1,6 @@
+every time wheel makes 1 revolution, sensor will detect bright (or dark) spot on wheel
+that will trigger high voltage
+
+interrupt would automatically call function based on signal
+
+An interrupt is hardware-triggered function call
