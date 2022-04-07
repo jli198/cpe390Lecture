@@ -14,7 +14,6 @@ double choose(int n, int r) {
 }
 
 double choose_arm(int n, int r);
-
 int main() {
   for(int i = 1; i < 50; i++)
     cout << setprecision(15) << i << '\t' << fact(i) << '\n';

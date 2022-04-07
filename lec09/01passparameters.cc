@@ -16,6 +16,6 @@ int main() {
   int ans3 = prod(2, 5, 3, 7);
   cout << ans3 << '\n';
 
-  uint64_t ans4 = max(4, 1, 9);
+  uint64_t ans4 = max(4000000000000ULL, 1, 9);
   cout << ans4 << '\n';
 }

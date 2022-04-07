@@ -1,4 +1,4 @@
-.arch armv8-a
+	.arch armv8-a
 	.file	"test.cc"
 	.text
 	.align	2
@@ -8,7 +8,7 @@
 _Z1fii:
 .LFB1592:
 	.cfi_startproc
-	add	w0, w1, w0 // w0 = w1 + w0
+	add	w0, w0, w1
 	ret
 	.cfi_endproc
 .LFE1592:
@@ -25,7 +25,7 @@ _Z1gmm:
 	.cfi_endproc
 .LFE1593:
 	.size	_Z1gmm, .-_Z1gmm
-	.section	.text.startup,"ax", @progbits
+	.section	.text.startup,"ax",@progbits
 	.align	2
 	.p2align 4,,11
 	.global	main
