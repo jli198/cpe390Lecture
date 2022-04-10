@@ -18,4 +18,3 @@ sum:
 
   mov x0, x2
   ret
-
