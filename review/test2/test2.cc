@@ -17,11 +17,12 @@ using namespace std;
   a = ~b          mvn x0, x1
 
   unsigned shift
-  a >> b          lsr x0, x1      10100000 --> 00101000
+  a >> b          lsr x0, x1      10110001 --> 00101100
   a << b          lsl x0, x1      10110001 --> 11000100
+
+  rotate does not exist in c++ ror x0, #3  10110001 --> 00110110
   
 */
-
 
 // convert the following C++ code into the equivalent ARM assembler
 int f(int a, int b, int c, int d) { // a AND b OR (NOT c) XOR d
@@ -30,8 +31,8 @@ int f(int a, int b, int c, int d) { // a AND b OR (NOT c) XOR d
 // and x0, x1, x2
 // orr x0, x1, x2
 // eor x0, x1, x2
-// mvn w0, w1 // x0 = NOT x1    given w1 = 
-                                //w0 = 
+// mvn w0, w1 // x0 = NOT x1    given w1 = 00000000000000001010010111110000
+                                   // w0 = 11111111111111110101101000001111
 
 uint64_t optimized1(uint64_t a, uint64_t b) {
 	return (a >> b) | (a << (64-b)); // what arm instruction does this turn into? ror 2
@@ -48,8 +49,6 @@ uint64_t optimized3(uint64_t a) {
 uint64_t optimized4(uint64_t a) {
 	return a % 64; // what arm instruction does this turn into? AND (63)
 }
-
-
 
 /*
   5*a*4 --> (5*4)*a
