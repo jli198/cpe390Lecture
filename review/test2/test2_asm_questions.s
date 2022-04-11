@@ -23,8 +23,8 @@ countdown:
 countdown2:
 1:	
 	// this line should be execute x0 times
-	sub x0, x0, #1
-	cmp x0, 0
+	sub x0, x0, #1 // subs is also acceptable
+	cmp x0, #0
 	bne 1b
 
 	//complete the code so counting down from x0 works
@@ -34,7 +34,7 @@ countdown3:
 	// this line should be execute x0 times
 	sub x0, x0, #1
 	cmp x0, #1
-	bgt 1b
+	bge 1b
 
 	
 countdownby2:
@@ -50,7 +50,7 @@ arraylookup1:
 1:
 	ldr	x3, [x0], #8
 	add	x2, x2, x3 // sum=sum+a[i]
-	sub	x1, x1, #1
+	subs x1, x1, #1
 	bne 1b
 	mov	x0, x2
 	ret

@@ -17,5 +17,5 @@ f:
   ror x5, x5, #3 // rotate right (a << (64-b))
   // example: if your register were 8 bits
   // x5 = 10110000
-  //rol x6, x6, #5
+  //rol x6, x6, #5 <= DOES NOT EXIST
   ret

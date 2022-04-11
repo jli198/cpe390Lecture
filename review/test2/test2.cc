@@ -35,7 +35,7 @@ int f(int a, int b, int c, int d) { // a AND b OR (NOT c) XOR d
                                    // w0 = 11111111111111110101101000001111
 
 uint64_t optimized1(uint64_t a, uint64_t b) {
-	return (a >> b) | (a << (64-b)); // what arm instruction does this turn into? ror 2
+	return (a >> b) | (a << (64-b)); // what arm instruction does this turn into? ror: (a >> b) is rotate, (a << (64-b)) shift bits on right to left; both make ror
 }
 
 uint64_t optimized2(uint64_t a) {
@@ -54,9 +54,10 @@ uint64_t optimized4(uint64_t a) {
   5*a*4 --> (5*4)*a
   5*a/6.0 -> (5/6.0) *a
 */
-// ^^^ COMMENTED BLOCK OF CODE ABOVE IS NOT ON TEST
+// ^^^ COMMENTED BLOCK OF CODE (FLOATING POINT OPERATIONS) ABOVE IS NOT ON TEST
 
 // a % 4 --> 0 to 3  00 01 10 11
+// only want low 2 bits (11). # % power of two == & that power of two - 1
 
 /*
 	Identify the value in the registers
