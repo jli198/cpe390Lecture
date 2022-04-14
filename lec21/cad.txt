@@ -1,0 +1,3 @@
+Fritzing: https://fritzing.org/
+Eagle: https://www.autodesk.com/products/eagle/overview
+KiCAD: https://www.kicad.org/
