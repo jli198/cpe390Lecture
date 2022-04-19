@@ -22,6 +22,9 @@ void loop() {
     Serial.println("duh!"); // this takes 4 * 1/960th of second
   }
 
+  //while(v != LOW) { } // THIS IS WRONG. Why?
+
+  //while (digitalRead(7) != LOW) {} this reads every time around
 
   if (digitalRead(7) == LOW) {
     
@@ -34,7 +37,13 @@ void loop() {
   // analogReadResolution(12); // set resolution if different than default
   int a = analogRead(A0); // read analog input
   // UNO: 10 bit accuracy, 7700 samples/second 0..1023 (5V-0)/(1023-0) (2.5V-0)/(512-0)
-  //Due: 12 bit accuracy, 1M s/s
+  //Due: 12 bit accuracy, 1M s/s 84Mhz ARM 32-bit 0..4095
+
+  /*
+    example: bullet going 180m/s length = .8cm = .008m
+    can detect it in light beam with 7700 samples/second?
+    how far does bullet travel in 1/7700 sec
+  */
 
   // for any PWM pin (Pulse width modulation)
   analogWrite(3, 128); // number from 0 to 255 controls duty cycle
