@@ -22,7 +22,7 @@ void loop() {
     Serial.println("duh!"); // this takes 4 * 1/960th of second
   }
 
-  //while(v != LOW) { } // THIS IS WRONG. Why?
+  //while(v != LOW) { } // THIS IS WRONG. Why? v never changes
 
   //while (digitalRead(7) != LOW) {} this reads every time around
 
@@ -50,7 +50,28 @@ void loop() {
 
   // analogWriteResolution(12) // set resolution if different
   // for Arduino Due, can write to two DAC pins to put out waveforms
-  analogWrite(DAC0, 2047); // 12 bit accuracy
+  analogWrite(DAC0, v); // 12 bit accuracy; v = 0 .. 4095
+
+  interrupts(); //enable interrupts
+
+  nointerrupts(); // disable interrupts
+  //https://www.arduino.cc/reference/en/language/functions/external-interrupts/attachinterrupt/
+
+  delay(500); // delay 500 milliseconds
+  delayMicroseconds(1234); // delay 1234 microseconds (accurate to a multiple of 4)
+
+  int v =micros();
+  /*
+    while (beam for gate 1 not broke) {}
+
+    t0 = micros();
+
+    while(beam for gate 2 not broken) {}
+    t1 = micros();
+    dist = ???
+
+    v = dist/ (t1-t0);
+    */
 }
 
 /*
