@@ -1,0 +1,19 @@
+1. Build voltage divider
+  V mid = (V1+V2) / (V1*V2)
+  
+  Vcc = 5V
+  A0 = Vcc(Rres/ (Rphoto+Rres))
+  example: photoresistor dark = 5500ohm, "light" = 500ohm
+2. Figure out known "ground truth" 
+need existing thermometer
+what about temperature measure not being same place as thermometer are building?
+  a. Insulate test container
+  b. Use material that has high heat capacity
+  c. Use known temperature material ice bath
+  d. water has SALT in it
+  e. voltage changes, sensor probably isnt same
+  f. observer principle: by measuring something, change it
+  g. voltage of power supply will affect A/D converter
+  h. changes over time? UGH!
+
+3. What is different kind of sensor that would heat water less? Thermocouple
