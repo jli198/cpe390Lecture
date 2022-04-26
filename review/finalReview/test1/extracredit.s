@@ -46,4 +46,3 @@ _Z9countonesm:
   bne 1b
   mov x0, x2
   ret
-
