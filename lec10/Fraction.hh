@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 class Fraction {
 private:
@@ -6,6 +7,7 @@ private:
 public:
   // constructor with initializer list
   Fraction(int n, int d) : num(n), den(d) { }
+
   // this is method (member function)
   // this is called with a.add(b) and returns fraction
   Fraction add(Fraction b) const { // <-- const here means readonly
@@ -24,16 +26,16 @@ public:
   // this is friend function
   // add (a,b)
   friend Fraction add(const Fraction& a, const Fraction& b) {
-    return Fraction(a.num*b.den);
+    return Fraction(a.num*b.den + a.den*b.num, a.den*b.den);
   }
 
   // return numerator of fraction
   int getNum() const {return num;}
+  
   int getDen() const {return den;}
 
   // this implements cout << f and prints out 1/2, 1/3 etc
   friend std::ostream& operator << (std::ostream& s, const Fraction& f) {
     s << f.num << "/" << f.den;
   }
-
 };
