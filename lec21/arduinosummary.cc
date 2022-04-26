@@ -60,7 +60,7 @@ void loop() {
   delay(500); // delay 500 milliseconds
   delayMicroseconds(1234); // delay 1234 microseconds (accurate to a multiple of 4)
 
-  int v =micros();
+  int v = micros();
   /*
     while (beam for gate 1 not broke) {}
 
