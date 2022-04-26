@@ -1,5 +1,8 @@
 #include <iostream>
 
+// FILE DELETED IN KRUGERS'S REPO
+// https://github.com/StevensDeptECE/CPE390/commit/54cc6eb9606bbee7661ab5f030cc47e63ddb0b2e
+
 /*
         Review of C++ we have covered
  */
