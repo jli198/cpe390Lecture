@@ -1,0 +1,94 @@
+What have learned this Semester?
+How to program efficiently (poratbly?) in C++
+How it works under hood (ARM Assembler)
+How to use knowledge of computer to program more efficiently
+* Some instructions are fastest than others
+* Some operations can be eliminated if they are redundant
+* Block I/O can be optimized by understanding nature of developer
+
+Where Can Go from Here?
+Kruger not teaching 390 any more
+Learn C++ (CPE-553, but warning, first few weeks should already know)
+Data Strucutres (CPE-360, CPE-593) How to make more efficient programs by choosing better ways to solve problems
+Computer Architecture (CPE-517) How to design microprocessor
+Digital Design (CPE487)
+GPU Programming (??) Zeng Fang, Hong Liu
+
+Last Day! Reach Topics
+How are computers developing today?
+How fast can current hardware get?
+Are there any new technologies that can continue to improve performance?
+
+Clock Speed is Unlikely to Improve in Current Technology
+Fundamental limits are heat (power density)
+
+How to Improve Computation/Watt?
+Parallel computation (multithreading)
+Mutiple execution units
+Vectorization (will look at vectorization now)
+
+New technologies
+Optical Computing
+* Requires photonic logic (does not exist yet)
+* Reduced heat, therefore increased speed 
+* Reduced crosstalk, potentially increasing density
+TeraHertz Circuits
+https://www.extremetech.com/extreme/193343-darpa-creates-first-1thz-computer-chip-earns-guiness-world-record
+https://en.wikipedia.org/wiki/Clock_rate
+
+Quantum computers
+For certain kinds of computation, quantum computers are much faster
+https://en.wikipedia.org/wiki/Quantum_computing
+Example: Breaking RSA (Schorr's algorithm)
+const int n = 1 << 30;
+for (int i = 0; i < n; i++) {
+  if (test(i)) {
+
+  }
+}
+on quantum computer bits = qqqqqqqqqqqqqq
+Find solution such taht test(qqqqqqqqqqqqqq)
+
+pick p,q prime size of p, q = 4096 bits / 64 = 80 words
+password="cat" BAD
+10000000000000000000000000000000000097 Prime? EHUGH
+#2 is not prime 
+#3 divide by 3 trikzies
+n=pq = O(8k bits)
+
+125125125
+x12512515
+=========
+
+asymmetric crypto
+anyone can send message with PUBLIC key
+but only can decrypt message
+factor(n) {
+  for (i = 2; i <= sqrt(n); i++) {
+    if n % i == 0
+  }
+}
+
+Thank you for your Hard Work this Semester!
+Final Topics
+1. C++ and assembler covered on Test #1 and #2
+2. hardware
+  a. CPU 
+  b. ALU
+  c. How multiple cores make computers faster (parallel processing)
+  d. Limiting factors of multiple cores (shared memory, limited bandwidth)
+  e. How RAM is faster sequentially (row, burst mode, multiple banks)
+  f. Cache
+  g. How to make Block I/O more efficient (read integer number of blocks at time)
+  ^^^ Code 4 bytes at time Disk Block Size 4K not great. have buffer. Need to be even multiple of block size
+3. A/D conversion
+  a. resolution
+  b. quantization error
+  c. tradeoffs (cost, power, speed, #bits)
+4. Motor control
+  a. PWM (how do make motor run at 50% power?)
+  b. H-bridge (how to make motor go forwards and backwards?)
+  c. N-channel and P-channel MOSFETS
+    i. Gate, Source, Drain
+    ii. Draw schematic controlling motor
+    iii. Explain what gate voltage has to be to turn motor on for N or P channel
