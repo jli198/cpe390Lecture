@@ -22,10 +22,27 @@ double dot_product(const double a[], const double b[], int n) {
   }
   __m256d temp = _mm256_hadd_pd(sum, sum); // add each half
   __m128d sum_high = _mm256_extractf128_pd(temp, 1); // pull out each half
-
-
-
-
-
-  
+  __m128d sum_low = _mm256_castpd256_pd128(temp);
+  __m128d result = _mm_add_pd(sum_high, sum_low); // add two halves
+  return ((double*) &result) [0];
 }
+
+double benchmarkSlowDotProduct(const double a[], const double b[], int n, int numIterations) {
+  double sum = 0;
+  for (int i = 0; i < numIterations; i++)
+    sum += slow_dot_product(a, b, n);
+  return sum;
+}
+
+double benchmarkAVXDotProduct(const double a[], const double b[], int n, int numIterations) {
+  double sum = 0;
+  for (int i = 0; i < numIterations; i++)
+    sum += slow_dot_product(a, b, n);
+  return sum;
+}
+
+const char* equalityTest(double a, double b) {
+  return a == b ? "Passed" : "Failed";
+}
+template<typename Func>
+void bench(const char msg[], Func f)
