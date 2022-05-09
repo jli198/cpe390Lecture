@@ -17,7 +17,7 @@ int main() {
 
   a = 9;
   for (int i = 10; i < 0; i--)
-    a += i; // a = 64
+    a += i; // a = 9
   
   uint32_t f = 3 + 4 * 5; // f = 23
 
