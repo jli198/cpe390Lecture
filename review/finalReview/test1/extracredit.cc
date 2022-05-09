@@ -19,3 +19,4 @@ asciiRect(8, 3, '*', 'a', 'b', 'c');
 *aaaaaa*
 bccccccb
 *aaaaaa*
+*/
