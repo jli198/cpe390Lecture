@@ -73,22 +73,38 @@ Thank you for your Hard Work this Semester!
 Final Topics
 1. C++ and assembler covered on Test #1 and #2
 2. hardware
-  a. CPU 
-  b. ALU
+  a. CPU - central processing unit. brain of computer. executes instructions
+  b. ALU - arithmetic logic unit. digital combinational logic circuit performs bitwise and arithmetic operations on integer binary
   c. How multiple cores make computers faster (parallel processing)
+    i. allows more instructions to be executed simultaneously
   d. Limiting factors of multiple cores (shared memory, limited bandwidth)
   e. How RAM is faster sequentially (row, burst mode, multiple banks)
-  f. Cache
+    i. seek operation allows disk head to read memory quicker in pattern rather than randomly
+  f. Cache - stores small amount of data in block of memory which allows future requests of data to be serviced quicker
+    i. relies upon locality of reference which assumes that blocks of memory will be used again
+    ii. smaller and faster as it can look up memory locations recently processed by processor
+    iii. close to CPU and RAM which means more of it leads to faster retrieval to CPU. holds recently processed instructions that can be yoinked faster
+    iv. slower RAM technology makes cache better option for retreiving heavily processed instructions
   g. How to make Block I/O more efficient (read integer number of blocks at time)
   ^^^ Code 4 bytes at time Disk Block Size 4K not great. have buffer. Need to be even multiple of block size
 3. A/D conversion
-  a. resolution
-  b. quantization error
+  a. resolution: (Vref-Vground)/2**n 
+  b. quantization error: +-(Vhigh-Vlow)/2(2**n) OR 1/2*resolution
   c. tradeoffs (cost, power, speed, #bits)
+    i. slower ADC and less bits makes ADC errors comparable.
 4. Motor control
   a. PWM (how do make motor run at 50% power?)
+    i. duty cycle 50% of usual duty cycle of 100% (half power)
   b. H-bridge (how to make motor go forwards and backwards?)
-  c. N-channel and P-channel MOSFETS
+    i. 4 MOSFETS (of either or all N or P-channel)
+    ii. diagonal transistors powered on. drain goes to positive and negative. drain to each port
+  c. N-channel and P-channel MOSFETS: basically use N-channel, more efficient; also basically the negative of each other
     i. Gate, Source, Drain
+      a. Gate: controls flow of electric current through circuit
+      b. Source: where voltage comes from
+      c. Drain: where voltage is grounded
+      d. VDS (Drain to source) voltage
     ii. Draw schematic controlling motor
     iii. Explain what gate voltage has to be to turn motor on for N or P channel
+      a. N-channel: + OR 0V; electrons
+      b. P-channel: - gate voltage; holes
