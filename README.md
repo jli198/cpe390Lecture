@@ -70,7 +70,7 @@ Grades will be based on:
 Late Policy: Assignments submitted after the deadline will not be graded.
 
 ## IMPORTANT DATES
-* Final exam date: **5/11/2022 Wednesday at 8.00am in Section A - BC 321, Section B - M 205**
+* Final exam date: **5/11/2022 Wednesday at 8.00am in GN 204 - Both Sections ~~Section A - BC 321, Section B - M 205**
 
 ## ACADEMIC INTEGRITY 
 
