@@ -70,16 +70,6 @@ Grades will be based on:
 Late Policy: Assignments submitted after the deadline will not be graded.
 
 ## IMPORTANT DATES
-* Deadline for Project Proposals **11/01/2019 Friday at 5pm ET**
-  - This includes creation of a github repository with READ.md file that contains the summary of the project.
-  - Late submissions or repositories with empty READ.md file will lose 30 points from their grade for the project.
-* Deadline for Projects **12/02/2019 Monday at 5pm ET**
-  - Projects will be graded based on
-    - organization of the github repository     (30 %)
-    - organization of the code                  (20 %)
-    - the quality of the code                   (20 %)
-    - inclusion of test codes                   (20 %)
-    - reproducibility                           (10 %)
 * Final exam date: **5/11/2022 Wednesday at 8.00am in Section A - BC 321, Section B - M 205**
 
 ## ACADEMIC INTEGRITY 
