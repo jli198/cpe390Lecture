@@ -1,0 +1,24 @@
+Lab 11 - Boom! Bomb Defuser Lab
+Author: Jason Li, Xavion McClary
+Cite:
+pledge "I pledge my honor that I have abided by Stevens Honor System." ~Jason Li, Xavion McClary
+
+phase1:
+9737 (look at the comments on the right)
+
+phase2:
+4638 (first hex #) Type it into terminal.
+4638 + x = 302 <- (second hex #). solve for x:  x = -4336
+
+phase3:
+type in a random phrase. keep pressing ni. 
+@ ~<phase3+52> type in these commands:
+x/s $x0
+x/s $x1
+it'll be a sentence (array of chars). Restart and put the sentence in. I got:
+Wednesday has been cancelled due to a scheduling error.
+
+phase4:
+x!/((x-2)!2!) = 26241390 (find # after it being lsl)
+Plug into symbolab
+x = 7245

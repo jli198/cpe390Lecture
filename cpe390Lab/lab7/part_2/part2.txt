@@ -1,0 +1,16 @@
+/*
+	Lab 7 - Part 2
+  AUTHOR: JLi, Xavion
+	CITE: https://stackoverflow.com/questions/9268586/what-are-callee-and-caller-saved-registers
+  https://developer.arm.com/documentation/den0024/a/The-ABI-for-ARM-64-bit-Architecture/Register-use-in-the-AArch64-Procedure-Call-Standard/Parameters-in-general-purpose-registers
+	PLEDGE: "I pledge my honor that I have abided by the Stevens Honor System" ~JLi, Xavion
+*/
+
+mov x0, x1 // This instruction sets the 64-bit value in register x0 equal to the 64-bit value in register x1. x0 = x1;
+add x2, x3, x5 // This instruction adds the 64-bit values in registers x3 and x5 together and then stores the 64-bit sum value in 64-bit register x2. x2 = x3 + x5;
+add w0, w2, w4 // This instruction adds the 32-bit values in registers w2 and w4 together and then stores the 32-bit sum value in 32-bit register w0. w0 = w2 + w4;
+add x6, x3, 1 // This instruction adds the 64-bit value in register x3 with the integer 1 and then stores the 64-bit sum value in 64-bit register x6. x6 = x3 + 1;
+mul x6, x3, x19 // This instruction multiplies the 64-bit value in register x3 and x19 together and then stores the 64-bit multiplication value in 64-bit register x6. x6 = x3 + x19;
+x19 is outside the supported 64-bit global ARM registers. It's called a calle-saved register which is used to hold values that are preserved
+and not changed. Similar to making a data type const i.e. const int64_t permanent = 0;
+cmp x3, 5 // subtracts 5 from x3, stores in temp variable for cmp

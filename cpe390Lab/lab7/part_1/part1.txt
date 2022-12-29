@@ -1,0 +1,55 @@
+Lab 7 - Part 1
+Author: JLi, Xavion
+Cite:
+pledge "I pledge my honor that I have abided by Stevens Honor System." ~JLi, Xavion
+
+a. What is the instruction to compute 64-bit unsigned multiplication?
+  Show an example where X0 = X1 * X2
+// your answer here: The instruction is umull.
+  umull	x0, x1, x2
+
+b. What is the instruction to compute 64 bit signed multiplication?
+  Show an example where X0 = X1 * X2
+// your answer here: The instruction is mull
+  mull	x0, x1, x2
+
+c. What is the instruction to compute 32-bit unsigned multiplication?
+  Show an example where W0 = W1 * W2
+// your answer here: The instruction is umul
+  umul x0,x1,x2
+
+d. What is the instruction to compute 32-bit signed multiplication?
+  Show an example where W0 = W1 * W2
+// your answer here: The instruction is mul
+  mul x0, x1, x2
+
+e. What is the instruction to compute double-precision floating-point addition?
+  Show an example where d0 = d1 + d2
+// your answer here: The instruction is fadd
+  fadd	d0, d1, d2
+
+f. What is the instruction to compute double-precision floating-point multiplication?
+  Show an example where d0 = d1 * d2
+// your answer here: The instruction is fmul
+  fmul d0, d1, d2
+
+g. What is the instruction to compute double-precision floating-point fused multiply-add?
+  Show an example where 
+// your answer here: The instruction is fmadd
+  fmadd	d0, d0, d0, d1
+
+The code in C++ can be more complicated than what we learned in class.
+From class, review the instructions that load from memory into a register, and store a register back into memory.
+
+h. What is the instruction to read from memory at the location in the X0 register, and load it into X1
+// your answer here: ldr x1, [x0]
+
+i. What is the instruction to write X1 into memory at location X0
+// your answer here: str x1, [x0]
+
+j. If you write a 64-bit quantity into memory and want to move to the next location, how much must you add to the index register? Write the instruction
+// your answer here: add x0,8
+
+k. If you write a 32-bit quantity into memory and want to move to the next location, how much must you add to the index register? Write the instruction
+	// your answer here: add x0,4
+

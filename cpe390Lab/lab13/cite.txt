@@ -1,0 +1,4 @@
+Lab 13 - Using DAC: Waveforms on Arduino
+Author: JLi, Xavion
+Cite: Victoria - sawtooth wave. Joshua, Michael - Help on Sine wave problems and last question
+pledge "I pledge my honor that I have abided by Stevens Honor System." ~JLi, Xavion
